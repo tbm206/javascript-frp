@@ -1,0 +1,41 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "functional reactive programming",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tbm206/javascript-frp.git"
+  },
+  "keywords": [
+    "frp",
+    "javascript",
+    "cyclejs"
+  ],
+  "author": "Taha Ben Masaud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbm206/javascript-frp/issues"
+  },
+  "homepage": "https://github.com/tbm206/javascript-frp#readme",
+  "dependencies": {
+    "@cycle/dom": "^22.7.0",
+    "@cycle/run": "^5.4.0",
+    "@cycle/xstream-run": "^4.2.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "snabbdom-pragma": "^2.8.0",
+    "xstream": "^11.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
