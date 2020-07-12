@@ -10,8 +10,10 @@ import {
   format,
 } from 'date-fns';
 
-const TIME_FORMAT = 'H:m';
+const TIME_FORMAT = 'HH:mm';
+const CLOCK_FORMAT = 'HH:mm:ss';
 const formatTime = t => format(t, TIME_FORMAT);
+const formatClock = t => format(t, CLOCK_FORMAT);
 
 const date = new Date();
 
@@ -43,7 +45,7 @@ function main(sources) {
     DOM: xs.combine(timeNow$, midnight$)
       .map(([timeNow, {fajir, duhr, asr, maghrib, isha}]) =>
         <div>
-          <h3>{timeNow}</h3>
+          <h3>{formatClock(timeNow)}</h3>
           <table>
             <thead>
               <tr>
