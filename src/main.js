@@ -19,21 +19,21 @@ const timeNow$ = xs.periodic(1000)
   .map(t => add(date, { seconds: t }));
 
 const midnight$ = timeNow$ 
-    .filter(t => [getHours, getMinutes, getSeconds].every(f => f(t) === 0))
-    .map(t => ({
-      fajir: formatTime(add(t, { hours: 4 })),
-      duhr: formatTime(add(t, { hours: 13 })),
-      asr: formatTime(add(t, { hours: 17 })),
-      maghrib: formatTime(add(t, { hours: 21 })),
-      isha: formatTime(add(t, { hours: 23 })),
-    }))
-    .startWith({
-      fajir: formatTime(add(date, { hours: 4 })),
-      duhr: formatTime(add(date, { hours: 13 })),
-      asr: formatTime(add(date, { hours: 17 })),
-      maghrib: formatTime(add(date, { hours: 21 })),
-      isha: formatTime(add(date, { hours: 23 })),
-    });
+  .filter(t => [getHours, getMinutes, getSeconds].every(f => f(t) === 0))
+  .map(t => ({
+    fajir: formatTime(add(t, { hours: 4 })),
+    duhr: formatTime(add(t, { hours: 13 })),
+    asr: formatTime(add(t, { hours: 17 })),
+    maghrib: formatTime(add(t, { hours: 21 })),
+    isha: formatTime(add(t, { hours: 23 })),
+  }))
+  .startWith({
+    fajir: formatTime(add(date, { hours: 4 })),
+    duhr: formatTime(add(date, { hours: 13 })),
+    asr: formatTime(add(date, { hours: 17 })),
+    maghrib: formatTime(add(date, { hours: 21 })),
+    isha: formatTime(add(date, { hours: 23 })),
+  });
 
 const drivers = {
   DOM: makeDOMDriver("#root"),
