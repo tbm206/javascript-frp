@@ -27,6 +27,7 @@
     "@cycle/run": "^5.4.0",
     "@cycle/xstream-run": "^4.2.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
+    "date-fns": "^2.14.0",
     "snabbdom-pragma": "^2.8.0",
     "xstream": "^11.12.0"
   },
